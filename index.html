@@ -321,54 +321,6 @@ mjx-container[display="true"] + br {
 
 
   
-    <article id="post-浅谈薛定谔方程的不含时解-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/16/%E6%B5%85%E8%B0%88%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%8D%E5%90%AB%E6%97%B6%E8%A7%A3-1/" class="article-date">
-  <time datetime="2020-05-16T13:06:00.000Z" itemprop="datePublished">2020-05-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/uncategorized/">uncategorized</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/16/%E6%B5%85%E8%B0%88%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%8D%E5%90%AB%E6%97%B6%E8%A7%A3-1/">浅谈薛定谔方程的不含时解</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://blog.hellholestudios.top/wp-content/uploads/2020/05/Erwin_Schr%C3%B6dinger_1933.jpg"> 如题，本文适合轻度装X不甚深入，可放心食用 前置知识： - 偏导数 - 复数（以及欧拉公式） - 仅需常微分方程即可 - 基本的量子力学常识</p>
-<h1 id="让我康康"><a href="#让我康康" class="headerlink" title="让我康康"></a>让我康康</h1><p>一维空间中的薛定谔方程（含时）长这个样子： $$i\hbar\frac{\partial}{\partial t}\Psi(x,t)=-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\Psi(x,t)+V(x,t)\Psi(x,t)$$ 其中，$\Psi(x,t)$为波函数，是从两个实数($x$,$t$)到一个复数的映射。 $\hbar$是<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%99%AE%E6%9C%97%E5%85%8B%E5%B8%B8%E6%95%B0">约化普朗克常数</a>，约等于$1.0545718 × 10^{-34} m^2 \cdot kg/s$ 其实就是$\hbar=\frac{h}{2\pi}$ $m$为粒子质量 $V(x,t)$为势能函数，即空间中每一点的势能。</p>
-<h1 id="我不要解偏微分方程！！111"><a href="#我不要解偏微分方程！！111" class="headerlink" title="我不要解偏微分方程！！111"></a>我不要解偏微分方程！！111</h1><p>可以。如题，这里讨论<strong>不含时</strong>薛定谔方程，所以我们来简化一下 如果$\Psi$可分离，即： $$\Psi(x,t)=\psi(x)T(t)$$ 代入原方程： $i\hbar\frac{d}{dt}T(t)\psi(x)=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\psi(x)T(t)+V(x,t)\psi(x)T(t)$ 哇，变成常微分方程了，爽 两边同除$\psi(x)T(t)$，得 $$i\hbar\frac{\frac{d}{dt}T(t)}{T(t)}=-\frac{\hbar^2}{2m}\frac{\frac{d^2}{dx^2}\psi(x)}{\psi(x)}+V(x,t)$$ 因为不含时，所以$V(x,t)$与$t$应该是无关的 这样的话上式左边只能是常数了 不妨设该常数为$E$ (其实$E$就是能量，但我不知道为什么) 于是得 $$-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\psi(x)=(E-V(x))\psi(x)$$ 上式即<strong>不含时</strong>薛定谔方程 不仅不含时，还不含$i$，太爽了，直接把$\psi$当作实函数吧(虽然我不知道为什么)</p>
-<h1 id="先解决-T-t"><a href="#先解决-T-t" class="headerlink" title="先解决$T(t)$"></a>先解决$T(t)$</h1><p>$E=i\hbar\frac{\frac{d}{dt}T(t)}{T(t)}$ $E T(t)=i\hbar\frac{d}{dt}T(t)$ 一阶线性常微分方程，直接上通解： $T(t)=Ce^{-i\frac{E}{\hbar}t}$ 不妨令$C=1$，这样$T(t)=1$，下文标准化时更爽 这样的话完整的解为： $$\Psi(x,t)=\psi(x)e^{-i\frac{E}{\hbar}t}$$</p>
-<h1 id="好了，来解-psi-x-吧"><a href="#好了，来解-psi-x-吧" class="headerlink" title="好了，来解$\psi(x)$吧"></a>好了，来解$\psi(x)$吧</h1><p>第一种情况：自由空间 即$V(x)=0$ 代入不含时薛定谔方程得： $-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\psi(x)=E\psi(x)$ 当然这也是有通解的，如下： $\psi(x)=Asin(kx)+Bcos(kx)$ 其中$k=\frac{\sqrt{2mE}}{\hbar}$ $A$,$B$为常数。 完整形式： $$\Psi(x,t)=(Asin(\frac{\sqrt{2mE}}{\hbar}x)+Bcos(\frac{\sqrt{2mE}}{\hbar}x))e^{-i\frac{E}{\hbar}t}$$ 恭喜，你已经解出了薛定谔方程最简单的解（自由空间）。</p>
-<h1 id="更难一点"><a href="#更难一点" class="headerlink" title="更难一点"></a>更难一点</h1><p>自由空间太无聊了，现在我们解<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%84%A1%E9%99%90%E6%B7%B1%E6%96%B9%E5%BD%A2%E9%98%B1">无限深方阱</a> $$V(x) = \begin{cases} 0 &amp; x \in [0,L] \ +\infty, &amp; x \not\in [0,L] \end{cases}$$ 在方阱中，明显符合上文自由空间的解 但在阱外，明显$\psi(x)=0$ 由于$\psi(x)$连续，必然要满足边界条件，即： $\psi(0)=0,\psi(L)=0$ 代一代 $\psi(0)=B$ 啊，$B=0$，$cos$没了 $\psi(L)=Asin(kL)=0$ 那么必然有: $kL=n\pi\hspace{3ex}(n=1,2,3…)$ 展开， $\frac{\sqrt{2mE}L}{\hbar}=n\pi$ 解$E$可得: $E=n^2\frac{\hbar^2\pi^2}{2mL^2}\hspace{3ex}(n=1,2,3…)$ 因为$\hbar=\frac{h}{2\pi}$ 可得(常用形式)： $$E_n=\frac{n^2 h^2}{8mL^2}\hspace{3ex}(n=1,2,3…)$$ 哇！！！ <strong>能量被量子化了</strong> 我们称之为<strong>能级</strong> 而且不同于经典力学，能量不能为$0$ 当$n=1$时: $E_1=\frac{h}{2mL^2}$ 我们称之为<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%9B%B6%E9%BB%9E%E8%83%BD%E9%87%8F">零点能量</a>。</p>
-<h1 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h1><p>标准化，即通过常数操作使得$\int_{-\infty}^{+\infty}\Psi(x,t)^2dx=1$ 众所周知，$\Psi(x,t)^2$可以理解为在某一时刻在某一位置测得粒子的概率密度，概率的积分自然应该为$1$。 这里通过调整$A$达到此目的(所谓常数操作)。 我们上文已经使得$T(t)=1$了，所以不用关心这一项 只要： $\int_0^L\psi(x)^2dx=1$ 即可。 那么就积一下吧 $=A^2\int_0^L sin^2(\frac{n\pi}{L}x)dx$ 然后可以换换元，用一下二倍角公式就做出来了留作习题答案略 积出来是$A^2\frac{L}{n\pi}(\frac{1}{2}n\pi-\frac{1}{4}sin(n\pi))$ 会发现$sin(n\pi)$刚好为0，原式化为： $A^2\frac{L}{2}=1$ $A=\sqrt{\frac{2}{L}}$ 综上， $$\psi(x)=\sqrt{\frac{2}{L}}sin(\frac{n\pi}{L}x)$$ $$\Psi(x)=\sqrt{\frac{2}{L}}sin(\frac{n\pi}{L}x)e^{-i\frac{E}{\hbar}t}\hspace{3ex}(n=1,2,3…)$$</p>
-<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>由于最终的波函数是个$sin$，在某些位置（波节）测量根本不会测得粒子的存在。 另外，如果把波函数画出来，和固定两端的震动的弦的驻波完全相同。 <img src="https://blog.hellholestudios.top/wp-content/uploads/2020/05/512px-Moodswingerscale.svg_.png"> $n=1$即为一次谐波，$n=2$即为二次谐波，以此类推。 神奇的量子力学。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.hellholestudios.top/2020/05/16/%E6%B5%85%E8%B0%88%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%8D%E5%90%AB%E6%97%B6%E8%A7%A3-1/" data-id="ckg503zzd00btr4urc2lbdunn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-trashed-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/05/09/trashed-2/" class="article-date">
@@ -414,51 +366,6 @@ mjx-container[display="true"] + br {
 
 
   
-    <article id="post-trashed-2-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/09/trashed-2-1/" class="article-date">
-  <time datetime="2020-05-09T15:02:54.000Z" itemprop="datePublished">2020-05-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/uncategorized/">uncategorized</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/09/trashed-2-1/">【神必函数】#4.神必的迭代函数(part2)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>因此进行迭代时在某些情况下会体现出周期的性质，周期为π</p>
-</blockquote>
-<p>是时候展现真正的技术了！！！</p>
-<h1 id="分叉性质"><a href="#分叉性质" class="headerlink" title="分叉性质"></a>分叉性质</h1><p>一般来说，任何具有”凸起”形状的函数进行迭代都会有分叉现象出现。 见<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Logistic_map">Wikipedia</a> 具体来说，“凸起”指在$[a,b]$上: $f(a)=0,f(b)=0,f(x)&gt;0 (x \in (a,b) )$ 大概这样吧。非常感性的东西。 对于我们的函数来说，在$r$变化时其表现具有如下阶段： ($r&lt;0$与$r \ge 0$是几乎对称的，懒得讨论了) $r \in [0,1)$ 收敛于一阶不动点处 $r \in [1,\pi)$ 收敛到两点间反复跳跃的状态 $r \in [\pi,\sim 3.44)$ 同上，变为4点 $r \in [\sim 3.44,\sim 3.536)$ 迅速分叉，相邻节点距离以<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B2%BB%E6%A0%B9%E9%AE%91%E5%A7%86%E5%B8%B8%E6%95%B8">费根鲍姆常数</a>递减 $r \in [\sim 3.536,\sim 4.61]$ 在单个周期内作混沌运动 $r \in [\sim 4.61, + \infty )$ 能够跳出单个周期 【此处缺失分叉图/蛛网图。。先咕掉】 其中，最后一阶段是最特别的，因为我们的迭代函数具有周期性。 对于单峰映射这种无周期函数，$r$超过$4$就会发散，这里却不会。 啊，我又懒了。下一期再讨论吧。。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.hellholestudios.top/2020/05/09/trashed-2-1/" data-id="ckg503zyq00a8r4ureeiqdbks" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-【神必函数】3-神必的迭代函数part1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/05/09/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%913-%E7%A5%9E%E5%BF%85%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%87%BD%E6%95%B0part1/" class="article-date">
@@ -495,53 +402,6 @@ mjx-container[display="true"] + br {
     </div>
     <footer class="article-footer">
       <a data-url="https://blog.hellholestudios.top/2020/05/09/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%913-%E7%A5%9E%E5%BF%85%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%87%BD%E6%95%B0part1/" data-id="ckg4yvv1d00ckh8urc85n07f2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chinese/" rel="tag">chinese</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/" rel="tag">math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zyq/" rel="tag">zyq</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【神必函数】3-神必的迭代函数part1-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/09/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%913-%E7%A5%9E%E5%BF%85%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%87%BD%E6%95%B0part1-1/" class="article-date">
-  <time datetime="2020-05-09T12:39:14.000Z" itemprop="datePublished">2020-05-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0/">神必函数</a>►<a class="article-category-link" href="/categories/%E8%BF%9E%E8%BD%BD%E5%86%85%E5%AE%B9/">连载内容</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/09/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%913-%E7%A5%9E%E5%BF%85%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%87%BD%E6%95%B0part1-1/">【神必函数】#3.神必的迭代函数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>众所周知，有 $x_{n+1}=r \cdot x_n(1-x_n)$ 这么一个东西，叫做<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/%E5%96%AE%E5%B3%B0%E6%98%A0%E8%B1%A1">单峰映像</a>。 该函数具有神必的性质：分叉，如图所示： <img src="https://blog.hellholestudios.top/wp-content/uploads/2020/05/LogisticMap_BifurcationDiagram-1024x724.png"> 由于该函数过于著名，有大量有关文章，因此再此不再讨论（赶紧去读Wikipedia啊） 而本文讨论的是$x_{n+1}=x_n - r sin x_n$，该函数与单峰映像有许多共通之处，但更加神必</p>
-<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>这玩意儿是我研究FM合成时想到的。。。 真是神必函数</p>
-<h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p>我们先观察$x - r sin x$的形状： 当$r=0$时长这个样子（蓝线为$y=x$)： <img src="https://blog.hellholestudios.top/wp-content/uploads/2020/05/Screenshot-from-2020-05-09-20-10-15.png"> 易见得$x=k \pi$为其一阶不动点。 实际上，$r$为任何值时该结论都成立。 <strong>因此进行迭代时在某些情况下会体现出周期的性质，周期为$2\pi$</strong> 该性质是以后讨论的重要基础，请务必记住</p>
-<h1 id="第一个神必性质"><a href="#第一个神必性质" class="headerlink" title="第一个神必性质"></a>第一个神必性质</h1><p>对于$r=1$时进行迭代，也就是$f(f(f(…..f(x)….)))$这样的东西 这不是阶梯函数么？？ <img src="https://blog.hellholestudios.top/wp-content/uploads/2020/05/Screenshot-from-2020-05-09-20-26-45-1024x477.png"> 所以说如果减掉一个$x$的话。。 我一看 哇！ 人群中突然钻出来一个锯齿波又是你 可以写入<a href="/archives/444">【三角函数的错误用法】</a>了 <img src="https://blog.hellholestudios.top/wp-content/uploads/2020/05/Screenshot-from-2020-05-09-20-29-50-1024x428.png"> 其实阶梯函数的出现，就意味着$r=1$时对$x$迭代会迅速趋近于其所在<strong>周期</strong>的两端。 你看周期性出现了吧</p>
-<h1 id="分叉性质"><a href="#分叉性质" class="headerlink" title="分叉性质"></a>分叉性质</h1><p>是时候展现真正的技术了！！！ 一般来说，任何具有”凸起”形状的函数进行迭代都会有分叉现象出现。如本文第一张图。 见<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Logistic_map">Wikipedia</a> 具体来说，“凸起”指在$[a,b]$上: $f(a)=0,f(b)=0,f(x)&gt;0 (x \in (a,b) )$ 大概这样吧。非常感性的东西。 对于我们的函数来说，在$r$变化时其表现具有如下阶段： ($r&lt;0$与$r \ge 0$是几乎对称的，懒得讨论了) $r \in [0,1)$ 收敛于一阶不动点处 $r \in [1,\pi)$ 收敛到两点间反复跳跃的状态 $r \in [\pi,\sim 3.44)$ 同上，变为4点 $r \in [\sim 3.44,\sim 3.536)$ 迅速分叉，相邻节点距离以<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B2%BB%E6%A0%B9%E9%AE%91%E5%A7%86%E5%B8%B8%E6%95%B8">费根鲍姆常数</a>递减 $r \in [\sim 3.536,\sim 4.61]$ 在单个周期内作混沌运动 $r \in (\sim 4.61, + \infty )$ 能够跳出单个周期 【此处缺失分叉图/蛛网图。。先咕掉】 其中，最后一阶段是最特别的，因为我们的迭代函数具有周期性。 对于单峰映射这种无周期函数，$r$超过$4$就会发散，这里却不会。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.hellholestudios.top/2020/05/09/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%913-%E7%A5%9E%E5%BF%85%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%87%BD%E6%95%B0part1-1/" data-id="ckg503zyx00atr4urhwbagrxe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chinese/" rel="tag">chinese</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/" rel="tag">math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zyq/" rel="tag">zyq</a></li></ul>
@@ -635,11 +495,155 @@ mjx-container[display="true"] + br {
 
 
   
+    <article id="post-【神必函数】2-耐克函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/01/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%912-%E8%80%90%E5%85%8B%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2020-05-01T12:08:21.000Z" itemprop="datePublished">2020-05-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0/">神必函数</a>►<a class="article-category-link" href="/categories/%E8%BF%9E%E8%BD%BD%E5%86%85%E5%AE%B9/">连载内容</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/01/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%912-%E8%80%90%E5%85%8B%E5%87%BD%E6%95%B0/">【神必函数】#2.耐克函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如题。 $nike(x)=(\sqrt{x}-1)^2$ $nikebottom(x)=(\sqrt{\frac{5}{3}x}-\sqrt{2})^2-1$ 另外，$nike(x)$ 会渐近于 $y=x$ 比对勾函数好看得不知到哪里去了 <img src="https://blog.hellholestudios.top/wp-content/uploads/2020/05/Screenshot-from-2020-05-01-20-02-36.png"> <a target="_blank" rel="noopener" href="https://www.geogebra.org/graphing/udtvzmc4">GeoGebra</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.hellholestudios.top/2020/05/01/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%912-%E8%80%90%E5%85%8B%E5%87%BD%E6%95%B0/" data-id="ckg4yvv1d00cgh8ur2yf117l3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chinese/" rel="tag">chinese</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/" rel="tag">math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zyq/" rel="tag">zyq</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-解析之美-曲线系" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/18/%E8%A7%A3%E6%9E%90%E4%B9%8B%E7%BE%8E-%E6%9B%B2%E7%BA%BF%E7%B3%BB/" class="article-date">
+  <time datetime="2020-04-18T10:07:47.000Z" itemprop="datePublished">2020-04-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/HDD-%E5%B0%8F%E9%A2%98%E7%8B%82%E5%81%9A/">HDD_小题狂做</a>►<a class="article-category-link" href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/18/%E8%A7%A3%E6%9E%90%E4%B9%8B%E7%BE%8E-%E6%9B%B2%E7%BA%BF%E7%B3%BB/">解析之美--曲线系</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="注意-理解曲线系最重要的要点是将某方程F-x-y-0中的多项式F-x-y-当做关于一点坐标的函数-当一点-m-n-在F-x-y-0的图像上时-便满足F-m-n-0"><a href="#注意-理解曲线系最重要的要点是将某方程F-x-y-0中的多项式F-x-y-当做关于一点坐标的函数-当一点-m-n-在F-x-y-0的图像上时-便满足F-m-n-0" class="headerlink" title="注意:理解曲线系最重要的要点是将某方程F(x,y)=0中的多项式F(x,y)当做关于一点坐标的函数.当一点(m,n)在F(x,y)=0的图像上时,便满足F(m,n)=0"></a>注意:理解曲线系最重要的要点是将某方程F(x,y)=0中的多项式F(x,y)当做关于一点坐标的函数.当一点(m,n)在F(x,y)=0的图像上时,便满足F(m,n)=0</h1><p><strong>1.先从一道不能算曲线系精髓的直线系题目说起</strong> <img src="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-300x290.jpg"> <strong>如图AD平分∠BAC,AD上任取一点E,使得BE交边CD于F,CE交边BD于G</strong> <strong>求证AD平分∠GAE</strong> 这似乎是一道较难的平几题,但在使用解析的情况下,解答却出乎意料的简单 首先设点 $A(0,0),B(k,-kb),C(c,kc),D(0,d),E(0,e)$ 此时所有点的位置均符合条件 联立BD得 $BD:y=(-k-\frac{d}{b})x+d$ 因为D在y轴上,所以根本不需要解方程 同理 $CD:y=(k-\frac{d}{c})x+d$ $BE:y=(-k-\frac{e}{b})x+e$ $CE:y=(k-\frac{e}{c})x+e$ 此时你可能会觉得:系数那么复杂,解G,F的坐标不知要解到什么时候! 不过这题的结论并不需要具体的坐标,而只需使两点到A的斜率互为相反数即可 于是我们可以设 $BD:y=\lambda_1 x+d$ $CD:y=\lambda_2 x+d$ $BE:y=\lambda_3 x+e$ $CE:y=\lambda_4 x+e$ G的坐标满足 $\lbrace^{y=\lambda_1 x+d}_{y=\lambda_4 x+e}$ $\lbrace^{x=\frac{d-e}{\lambda_4 -\lambda_1}}_{y=\frac{\lambda_4d -\lambda_1e}{\lambda_4 -\lambda_1}}$ 其中y的坐标只需将x系数都化为 $\lambda_1 \lambda_4$ 轻松解得 $\frac{y}{x}=\frac{\lambda_4d -\lambda_1e}{d-e}$ 同理F的坐标满足 $\frac{y}{x}=\frac{\lambda_3d -\lambda_2e}{d-e}$ 根据条件,只需使 $\lambda_4d -\lambda_1e=-(\lambda_3d -\lambda_2e)$ 即可 两边一移项,立即得出结论 <strong>QED</strong> <strong>2.关于三个两两相交的圆的经典结论</strong> <img src="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-1-300x277.jpg"> <strong>已知3个圆两两相交,证明所连的三条弦交于一点,或两两平行</strong> 在做这道题之前,首先要介绍一下两圆的根轴,在两圆相交时便是交点连成的弦 设三圆的方程为 $C_i=x^2+D_ix+y^2+E_iy+F_i=0(i=1,2,3)$ 首先考虑交点为A,B的两个圆,设它们是$C_1,C_2$ A点同时满足 $C_1=0,C_2=0$ ,所以它满足 $C_1-C_2=0$ ,即 $(D_1-D_2)x_A+(E_1-E_2)y_A+(F_1-F_2)=0$ 所以A在直线 $(D_1-D_2)x+(E_1-E_2)y+(F_1-F_2)=0$ 上,同理,B也在这条直线上 这条直线就称为两圆的根轴 于是我们得到三条直线 $(D_1-D_2)x+(E_1-E_2)y+(F_1-F_2)=0①$ $(D_2-D_3)x+(E_2-E_3)y+(F_2-F_3)=0②$ $(D_1-D_3)x+(E_1-E_3)y+(F_1-F_3)=0③$ 联立 $①②,①③,②③$ 为三个交点满足的方程组 不难看出, $①+②=③$ 于是其实三方程组均为同一方程组! 若 $①②$ 的方程组无解,则三个方程组均无解 若 $①②$ 的方程组解为 $\lbrace^{x=x_0}_{y=y_0}$ ,则三个方程组均为这个解 所以三弦交于一点或两两平行 <strong>QED</strong> <strong>3.蝴蝶定理</strong> 蝴蝶定理是平几中著名的定理,而有了曲线系的帮助,我们大大拓宽条件,可以证明两弦为二次曲线的蝴蝶定理 <a href="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-2.jpg"><img src="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-2-300x266.jpg"></a> <em>平几中只能证明AC,BD为直线的情况</em> <strong>已知有一圆,任作一条弦l,作此弦中点O,过O作直线AD,BC交圆于A,B,C,D.有一过A,B,C,D的二次曲线交l于E,F.求证EO=FO</strong> 其实通过仿射变换不难发现将圆换为椭圆结论依然成立,在此只证圆的情况 首先建立合适的平面直角坐标系,将圆心放在y轴上,于是x轴便可作为弦l,原点作为弦中点O 设圆方程 $C=x^2+(y-a)^2-r^2=0$ 两直线为 $L_1=y-k_1x=0,L_2=y-k_2x=0$ 由 $L_1=0,L_2=0$ 与 $C=0$ 的四个交点生成的二次曲线便为 $C+\lambda L_1L_2=x^2+(y-a)^2-r^2+\lambda (y-k_1x)(y-k_2x)=0$ 那么为什么能这样”生成”二次曲线呢? 先考察 $L_1$ 与 $C$ 的一个交点A A坐标同时满足 $L_1=0,C=0$ ,所以坐标满足 $C+\lambda L_1L_2=0+\lambda 0 L_2=0$ 同理B,C,D均在这生成的二次曲线上 要求E,F的坐标,便要将 $y=0$ 带入 $x^2+(y-a)^2-r^2+\lambda (y-k_1x)(y-k_2x)=0$ 不难发现带完后的方程未知数只有 $x^2$ 所以此方程两根互为相反数 所以EO=FO <strong>QED</strong> 那么由这道题的题解,我们发现了曲线系中一个重要的思想–由直线生成二次曲线</p>
+<blockquote>
+<p>公式:由二次曲线 $C=0$ 与直线 $L_1=0,L_2=0$ 的四交点生成的二次曲线为 $C+\lambda L_1L_2=0$ 同样的,由直线 $L_1=0,L_2=0,L_3=0,L_4=0$ 的四个交点生成的二次曲线曲线为 $L_1L_3+\lambda L_2L_4=0$ 由两条切线 $L_1=0,L_2=0$ 与两个切点的连线 $L_3=0$ 生成的二次曲线为 $L_1L_2+\lambda L_3^2=0$ (这里可以看成是一组对边重合为 $L_3$ 的四边形) 由直线 $L_1=0,L_2=0,L_3=0$ 的三个交点生成的二次曲线为 $L_1L_2+\lambda L_2L_3+\mu L_3L_1=0$</p>
+</blockquote>
+<p>其中四边形的生成较为常用,其示意图如下所示 <a href="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7.png"><img src="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-300x231.png"></a> <a href="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-1.png"><img src="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-1-300x232.png"></a> 其中相乘的直线方程为对边或为中间交叉两线 <strong>4.帕斯卡定理</strong> <a href="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-3.jpg"><img src="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-3-300x247.jpg"></a> <strong>若一二次曲线的内接六边形对边两两不平行,证明此内接六边形三组对边交点三点共线</strong> 首先设从AB开始顺时针排序的六条直线分别为 $L_i=0(i=1,2,3,4,5,6)$ 此定理是圆的内接六边形,而生成二次曲线系一般通过四边形生成,于是联想到连接AD,设AD直线方程为 $m=0$ 由此可已通过分割成的两个六边形生成二次曲线 $C=\lambda_1L_1L_3+\mu_1L_2m①=\lambda_2L_4L_6+\mu_2L_5m②$ (因为生成的是同一条二次曲线,所以直接用等号连接①②两式) 因为m是设出来的直线,而题目结论中并未涉及m,所以要想法把m消掉 通过对比系数发现,可以通过 $\mu_2L_5①-\mu_1L_2②$ 消去 即 $(\mu_2L_5-\mu_1L_2)C=\lambda_1\mu_2L_1L_3L_5-\lambda_2\mu_1L_2L_4L_6=0$ 我们发现,上式将编号分别为奇偶的边分成了两组,也正好是对边的分组.考虑对边 $L_1,L_4$ 的交点I,将其坐标带入上式发现满足右边等于0 于是左边也应等于0,但I不再C上,所以只能是I的坐标满足 $\mu_2L_5-\mu_1L_2=0$ 而这是一条直线 同理,G,H也在这条直线上 所以三点共线 <strong>QED</strong> <strong>最后留两道练习供大家检测自我</strong> <strong>1.蝴蝶定理的直线情况</strong> 细心的朋友可能会发现,例题中蝴蝶定理的证明并不能证其直线情况,因为没有二次曲线是两条直线.所以请用曲线系练习证明蝴蝶定理的直线情况 <a href="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-4.jpg"><img src="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-4-300x217.jpg"></a> <strong>即AB为一二次曲线的弦,O为AB中点,过O任作两条弦DF,CE,连接CF,DE与AB交于G,H.证明O为GH中点</strong> <a target="_blank" rel="noopener" href="https://www.geogebra.org/classic/wuqwzcvq">Geogebra</a> <strong>2.直尺作切线</strong> <a href="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-5.jpg"><img src="https://blog.hellholestudios.top/wp-content/uploads/2020/04/%E6%8D%95%E8%8E%B7-5-300x225.jpg"></a> <strong>P为二次曲线外一点(规定不含焦点的区域为外部),过P做二次曲线两条切线,切点为M,N.过P的两条直线交二次曲线于A,B,C,D.连接AC,BD交于O.证明O在MN上</strong> 只要证明了这题,就可以通过做两个像O一样的点,便可只用直尺作出二次曲线切线</p>
+<blockquote>
+<p>提示:设二次曲线方程为 $Ax^2+By^2+Cxy+Dx+Ey+F=0$ ,P点坐标为 $(x_0,y_0)$ ,则MN为 $Ax_0x+By_0y+C\frac{x_0y+y_0x}{2}+D\frac{x+x_0}{2}+E\frac{y+y_0}{2}+F=0$ P称为极点,MN称为极线</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.geogebra.org/classic/mn2jst9s">Geogebra</a> <strong>最后,以华罗庚的名言结束此文</strong></p>
+<blockquote>
+<p>数缺形时少直觉， 形少数时难入微。 数形结合百般好， 割裂分家万事非。 ——华罗庚</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.hellholestudios.top/2020/04/18/%E8%A7%A3%E6%9E%90%E4%B9%8B%E7%BE%8E-%E6%9B%B2%E7%BA%BF%E7%B3%BB/" data-id="ckg4yvv1x00e5h8ur4e7n3ub6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chinese/" rel="tag">chinese</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hdd/" rel="tag">hdd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/" rel="tag">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-orange-boy-can-you-solve-it-out-ep-40" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/15/orange-boy-can-you-solve-it-out-ep-40/" class="article-date">
+  <time datetime="2020-04-15T11:00:14.000Z" itemprop="datePublished">2020-04-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%B0%8F%E5%B0%8F%E6%80%9D%E8%80%83%E9%A2%98/">小小思考题</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/15/orange-boy-can-you-solve-it-out-ep-40/">Orange Boy Can You Solve It Out? Ep. 40</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Simple 思考题</p>
+<h1 id="Ninja"><a href="#Ninja" class="headerlink" title="Ninja"></a>Ninja</h1><p>Try to find any of three integers X,Y,Z in a given integer array A of length N so that X+Y=Z.</p>
+<h1 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h1><p>Input: A={1,2,3} Output: X=1,Y=2,Z=3 Input: A={0} Output: X=0,Y=0,Z=0 Input: A={1,9,2,6,0,8,1,7} Output: X=1,Y=8,Z=9 Input: A={1,2,4} Output: NO</p>
+<h1 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h1><p>Subtask 1(10%):N&lt;=1000 Subtask 2(30%):N&lt;=20000,Ai&lt;=20000 Subtask 3(30%):N&lt;=1e5,Ai&lt;=1e5 Subtask 4(30%):N&lt;=1e5,Ai&lt;=1e9</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>For Subtask 2, we can maintain a Bitmask x and y. the i-th bit of x is true if i is in the array. let <code>y=x.clone()</code> Then we sort the array, for each number i, <code>x&lt;&lt;=(a[i]-a[i-1])</code>. If <code>x&amp;y!=0</code> then we find the answer Time Complexity is O(n^2/w)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.hellholestudios.top/2020/04/15/orange-boy-can-you-solve-it-out-ep-40/" data-id="ckg4yvv0f0091h8ur8g0v7cj0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cp/" rel="tag">cp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eng/" rel="tag">eng</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/obcysio/" rel="tag">obcysio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xgn/" rel="tag">xgn</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -650,7 +654,7 @@ mjx-container[display="true"] + br {
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HDD-%E5%B0%8F%E9%A2%98%E7%8B%82%E5%81%9A/">HDD_小题狂做</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/LOG/">LOG</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/uncategorized/">uncategorized</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AE%87%E6%B0%94%E7%89%A9%E7%90%86/">宇气物理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E5%B0%8F%E6%80%9D%E8%80%83%E9%A2%98/">小小思考题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E5%B7%A7/">技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E2%99%82%E8%AE%B0/">日♂记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AF%94%E8%B5%9B%E8%AE%B0%E5%BD%95/">比赛记录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0/">神必函数</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%84%E6%B5%8B/">评测</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%9E%E8%BD%BD%E5%86%85%E5%AE%B9/">连载内容</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HDD-%E5%B0%8F%E9%A2%98%E7%8B%82%E5%81%9A/">HDD_小题狂做</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/LOG/">LOG</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/uncategorized/">uncategorized</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E5%B0%8F%E6%80%9D%E8%80%83%E9%A2%98/">小小思考题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E5%B7%A7/">技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E2%99%82%E8%AE%B0/">日♂记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AF%94%E8%B5%9B%E8%AE%B0%E5%BD%95/">比赛记录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0/">神必函数</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%84%E6%B5%8B/">评测</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%9E%E8%BD%BD%E5%86%85%E5%AE%B9/">连载内容</a></li></ul>
     </div>
   </div>
 
@@ -660,7 +664,7 @@ mjx-container[display="true"] + br {
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/activity/" rel="tag">activity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chinese/" rel="tag">chinese</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chn/" rel="tag">chn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeforces/" rel="tag">codeforces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp/" rel="tag">cp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/" rel="tag">dev</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/diary/" rel="tag">diary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eng/" rel="tag">eng</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/english/" rel="tag">english</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/" rel="tag">game</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hdd/" rel="tag">hdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hhl2/" rel="tag">hhl2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hhsoj/" rel="tag">hhsoj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/japanese/" rel="tag">japanese</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jgh/" rel="tag">jgh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/" rel="tag">math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/monkeyKing/" rel="tag">monkeyKing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/obcysio/" rel="tag">obcysio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/" rel="tag">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/syr/" rel="tag">syr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tengfei-story/" rel="tag">tengfei story</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xgn/" rel="tag">xgn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xzm/" rel="tag">xzm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zyq/" rel="tag">zyq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%BC%E7%BE%8E%E8%88%92%E5%88%A9%E9%A2%97%E7%B2%92/" rel="tag">尼美舒利颗粒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8B%97/" rel="tag">狗</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/activity/" rel="tag">activity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chinese/" rel="tag">chinese</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chn/" rel="tag">chn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeforces/" rel="tag">codeforces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp/" rel="tag">cp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/" rel="tag">dev</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/diary/" rel="tag">diary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eng/" rel="tag">eng</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/english/" rel="tag">english</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/" rel="tag">game</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hdd/" rel="tag">hdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hhsoj/" rel="tag">hhsoj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/japanese/" rel="tag">japanese</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jgh/" rel="tag">jgh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/" rel="tag">math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/monkeyKing/" rel="tag">monkeyKing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/obcysio/" rel="tag">obcysio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/" rel="tag">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/syr/" rel="tag">syr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tengfei-story/" rel="tag">tengfei story</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xgn/" rel="tag">xgn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xzm/" rel="tag">xzm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zyq/" rel="tag">zyq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%BC%E7%BE%8E%E8%88%92%E5%88%A9%E9%A2%97%E7%B2%92/" rel="tag">尼美舒利颗粒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8B%97/" rel="tag">狗</a></li></ul>
     </div>
   </div>
 
@@ -670,7 +674,7 @@ mjx-container[display="true"] + br {
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/activity/" style="font-size: 10px;">activity</a> <a href="/tags/chinese/" style="font-size: 18px;">chinese</a> <a href="/tags/chn/" style="font-size: 10px;">chn</a> <a href="/tags/codeforces/" style="font-size: 11.33px;">codeforces</a> <a href="/tags/cp/" style="font-size: 19.33px;">cp</a> <a href="/tags/dev/" style="font-size: 15.33px;">dev</a> <a href="/tags/diary/" style="font-size: 16.67px;">diary</a> <a href="/tags/eng/" style="font-size: 10px;">eng</a> <a href="/tags/english/" style="font-size: 18.67px;">english</a> <a href="/tags/game/" style="font-size: 13.33px;">game</a> <a href="/tags/hdd/" style="font-size: 12.67px;">hdd</a> <a href="/tags/hhl2/" style="font-size: 10px;">hhl2</a> <a href="/tags/hhsoj/" style="font-size: 12.67px;">hhsoj</a> <a href="/tags/japanese/" style="font-size: 10.67px;">japanese</a> <a href="/tags/jgh/" style="font-size: 10.67px;">jgh</a> <a href="/tags/math/" style="font-size: 14.67px;">math</a> <a href="/tags/monkeyKing/" style="font-size: 11.33px;">monkeyKing</a> <a href="/tags/obcysio/" style="font-size: 17.33px;">obcysio</a> <a href="/tags/server/" style="font-size: 13.33px;">server</a> <a href="/tags/syr/" style="font-size: 12px;">syr</a> <a href="/tags/tengfei-story/" style="font-size: 10.67px;">tengfei story</a> <a href="/tags/xgn/" style="font-size: 20px;">xgn</a> <a href="/tags/xzm/" style="font-size: 16px;">xzm</a> <a href="/tags/zyq/" style="font-size: 14px;">zyq</a> <a href="/tags/%E5%B0%BC%E7%BE%8E%E8%88%92%E5%88%A9%E9%A2%97%E7%B2%92/" style="font-size: 10px;">尼美舒利颗粒</a> <a href="/tags/%E7%8B%97/" style="font-size: 10.67px;">狗</a>
+      <a href="/tags/activity/" style="font-size: 10px;">activity</a> <a href="/tags/chinese/" style="font-size: 17.86px;">chinese</a> <a href="/tags/chn/" style="font-size: 10px;">chn</a> <a href="/tags/codeforces/" style="font-size: 11.43px;">codeforces</a> <a href="/tags/cp/" style="font-size: 19.29px;">cp</a> <a href="/tags/dev/" style="font-size: 15px;">dev</a> <a href="/tags/diary/" style="font-size: 16.43px;">diary</a> <a href="/tags/eng/" style="font-size: 10px;">eng</a> <a href="/tags/english/" style="font-size: 18.57px;">english</a> <a href="/tags/game/" style="font-size: 13.57px;">game</a> <a href="/tags/hdd/" style="font-size: 12.86px;">hdd</a> <a href="/tags/hhsoj/" style="font-size: 11.43px;">hhsoj</a> <a href="/tags/japanese/" style="font-size: 10.71px;">japanese</a> <a href="/tags/jgh/" style="font-size: 10.71px;">jgh</a> <a href="/tags/math/" style="font-size: 14.29px;">math</a> <a href="/tags/monkeyKing/" style="font-size: 11.43px;">monkeyKing</a> <a href="/tags/obcysio/" style="font-size: 17.14px;">obcysio</a> <a href="/tags/server/" style="font-size: 13.57px;">server</a> <a href="/tags/syr/" style="font-size: 12.14px;">syr</a> <a href="/tags/tengfei-story/" style="font-size: 10px;">tengfei story</a> <a href="/tags/xgn/" style="font-size: 20px;">xgn</a> <a href="/tags/xzm/" style="font-size: 15.71px;">xzm</a> <a href="/tags/zyq/" style="font-size: 13.57px;">zyq</a> <a href="/tags/%E5%B0%BC%E7%BE%8E%E8%88%92%E5%88%A9%E9%A2%97%E7%B2%92/" style="font-size: 10px;">尼美舒利颗粒</a> <a href="/tags/%E7%8B%97/" style="font-size: 10.71px;">狗</a>
     </div>
   </div>
 
@@ -704,11 +708,11 @@ mjx-container[display="true"] + br {
           </li>
         
           <li>
-            <a href="/2020/05/16/%E6%B5%85%E8%B0%88%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%8D%E5%90%AB%E6%97%B6%E8%A7%A3-1/">浅谈薛定谔方程的不含时解</a>
+            <a href="/2020/05/09/trashed-2/">【神必函数】#4.神必的迭代函数(part2)</a>
           </li>
         
           <li>
-            <a href="/2020/05/09/trashed-2/">【神必函数】#4.神必的迭代函数(part2)</a>
+            <a href="/2020/05/09/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%913-%E7%A5%9E%E5%BF%85%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%87%BD%E6%95%B0part1/">【神必函数】#3.神必的迭代函数</a>
           </li>
         
       </ul>

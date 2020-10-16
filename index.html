@@ -1,4 +1,8 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>Hellholestudios</title><meta name="description" content="A Blog Powered By Hexo"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 5.2.0"><style>mjx-container[jax="SVG"] {
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>Hellholestudios</title><meta name="description" content="A Blog Powered By Hexo"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -115,30 +119,75 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Hellholestudios</a></h3></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai </a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a class="current" href="/">Home</a></li><li><a href="/about">Sobre</a></li><li><a href="/archives">Arquivo</a></li><li><a href="/links">Links</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li></div><div class="avatar"><img></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/05/16/%E6%B5%85%E8%B0%88%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%8D%E5%90%AB%E6%97%B6%E8%A7%A3/">浅谈薛定谔方程的不含时解</a></h3></div><div class="post-content"><p> 如题，本文适合轻度装X不甚深入，可放心食用 前置知识： - 偏导数 - 复数（以及欧拉公式） - 仅需常微分方程即可 - 基本的量子力学常识
+</style></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Hellholestudios</a></h3></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai </a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a class="current" href="/">Home</a></li><li><a href="/about">Sobre</a></li><li><a href="/archives">Arquivo</a></li><li><a href="/links">Links</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li></div><div class="avatar"><img></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/"></a></h3></div><div class="post-content"><p>
+</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-10-16</span><i class="fa fa-tag"></i></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E6%B5%85%E8%B0%88%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%8D%E5%90%AB%E6%97%B6%E8%A7%A3/">浅谈薛定谔方程的不含时解</a></h3></div><div class="post-content"><p>
+如题，本文适合轻度装X不甚深入，可放心食用
+前置知识：
+- 偏导数
+- 复数（以及欧拉公式）
+- 仅需常微分方程即可
+- 基本的量子力学常识
+
 让我康康
-一维空间中的薛定谔方程（含时）长这个样子：  其中，为波函数，是从两个实数(,)到一个复数的映射。 是约化普朗克常数，约等于 其实就是 为粒子质量 为势能函...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-16</span><i class="fa fa-tag"></i><a class="tag" href="/categories/uncategorized/" title="uncategorized">uncategorized </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/05/09/trashed-2/">【神必函数】#4.神必的迭代函数(part2)</a></h3></div><div class="post-content"><p>
+
+一维空间中的薛定谔方程（含时）长这个样子：
+
+其中，为波函数，是从两个实数(,)到一个复数的映射。
+是约化普朗克常数，约等于
+其...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-16</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E3%80%90crimson-boy-can-you-solve-it-%E3%80%91-%E3%80%902%E3%80%91-%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F/">【Crimson boy can you solve it?】 【2】 组合恒等式?!</a></h3></div><div class="post-content"><p>有一说一,这道题出得挺好,能让你在解完后感受无尽的快乐(可能是因为我水平太次了)
+题面:
+已知
+证明
+题解等crimsonboi看过后再写吧
+</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-14</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%91-4-%E7%A5%9E%E5%BF%85%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%87%BD%E6%95%B0-part2/">【神必函数】#4.神必的迭代函数(part2)</a></h3></div><div class="post-content"><p>
 因此进行迭代时在某些情况下会体现出周期的性质，周期为π
 
 是时候展现真正的技术了！！！
+
 分叉性质
-一般来说，任何具有"凸起"形状的函数进行迭代都会有分叉现象出现。 见Wikipedia 具体来说，“凸起”指在上:  大概这样吧。非常感性的东西。 对于我们的函数来说，在变化时其表现具有如下阶段： (与是...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-09</span><i class="fa fa-tag"></i><a class="tag" href="/categories/uncategorized/" title="uncategorized">uncategorized </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/05/03/trashed-3/">神必的不等式</a></h3></div><div class="post-content"><p>这是一个神必的远古（12月）发现，我也不知对不对 :/  如图，这是一个严格凹函数.
-</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-03</span><i class="fa fa-tag"></i><a class="tag" href="/categories/uncategorized/" title="uncategorized">uncategorized </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/05/03/trashed/">神必的不等式</a></h3></div><div class="post-content"><p>这是一个神必的远古（12月）发现，我也不知对不对 :/  如图，这是一个严格凹函数.
-</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-03</span><i class="fa fa-tag"></i><a class="tag" href="/categories/uncategorized/" title="uncategorized">uncategorized </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/04/18/%E8%A7%A3%E6%9E%90%E4%B9%8B%E7%BE%8E-%E6%9B%B2%E7%BA%BF%E7%B3%BB/">解析之美--曲线系</a></h3></div><div class="post-content"><p>注意:理解曲线系最重要的要点是将某方程F(x,y)=0中的多项式F(x,y)当做关于一点坐标的函数.当一点(m,n)在F(x,y)=0的图像上时,便满足F(m,n)=0
-1.先从一道不能算曲线系精髓的直线系题目说起  如图AD平分∠BAC,AD上任取一点E,使得BE交边CD于F,CE交边BD于G 求证AD平分∠...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-04-18</span><i class="fa fa-tag"></i><a class="tag" href="/categories/小知识/" title="小知识">小知识 </a><a class="tag" href="/categories/HDD-小题狂做/" title="HDD_小题狂做">HDD_小题狂做 </a><a class="tag" href="/tags/chinese/" title="chinese">chinese </a><a class="tag" href="/tags/hdd/" title="hdd">hdd </a><a class="tag" href="/tags/math/" title="math">math </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/04/15/orange-boy-can-you-solve-it-out-ep-40/">Orange Boy Can You Solve It Out? Ep. 40</a></h3></div><div class="post-content"><p>Simple 思考题
-Ninja
-Try to find any of three integers X,Y,Z in a given integer array A of length N so that X+Y=Z.
-Example
-Input: A={1,2,3} Output: X=1,Y=2,Z...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-04-15</span><i class="fa fa-tag"></i><a class="tag" href="/categories/小小思考题/" title="小小思考题">小小思考题 </a><a class="tag" href="/tags/xgn/" title="xgn">xgn </a><a class="tag" href="/tags/cp/" title="cp">cp </a><a class="tag" href="/tags/obcysio/" title="obcysio">obcysio </a><a class="tag" href="/tags/eng/" title="eng">eng </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/03/22/orange-boy-can-you-solve-it-out-ep-39/">Orange Boy Can You Solve It Out? Ep. 39</a></h3></div><div class="post-content"><p>思考题 greedy?
-SMM
-Have you ever played Super Mario Maker (2)? There's an interesting mode called Endless Challenge. Let's look at a simplified version: The g...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-03-22</span><i class="fa fa-tag"></i><a class="tag" href="/categories/小小思考题/" title="小小思考题">小小思考题 </a><a class="tag" href="/tags/english/" title="english">english </a><a class="tag" href="/tags/xgn/" title="xgn">xgn </a><a class="tag" href="/tags/cp/" title="cp">cp </a><a class="tag" href="/tags/obcysio/" title="obcysio">obcysio </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/03/15/rune-factory-4-speical-%E6%B8%B8%E7%8E%A9%E6%84%9F%E6%83%B3/">Rune Factory 4 Speical 游玩感想</a></h3></div><div class="post-content"><p>Sorry, this article is for Chinese readers.
-前言
-本文章含有Mild Spoiler 笔者二月初的时候瞎逛Nintendo美区网站关注到了RF4S的发布。第一眼看到农场元素就觉得是牧场物语就感觉很熟悉，又听说可以和Monster交朋友，还有一条大龙，笔者对这些元素都...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-03-15</span><i class="fa fa-tag"></i><a class="tag" href="/categories/评测/" title="评测">评测 </a><a class="tag" href="/tags/xgn/" title="xgn">xgn </a><a class="tag" href="/tags/chinese/" title="chinese">chinese </a><a class="tag" href="/tags/game/" title="game">game </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/03/15/orange-boy-can-you-solve-it-out-ep-38/">Orange Boy Can You Solve It Out? Ep. 38</a></h3></div><div class="post-content"><p>思考题 long ago
-Chess
-Ninetail and Doragon are playing Global Chess on a chessboard with N*M grids. The left-upper corner is (1,1) and the right-lower corner ...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-03-15</span><i class="fa fa-tag"></i><a class="tag" href="/categories/小小思考题/" title="小小思考题">小小思考题 </a><a class="tag" href="/tags/english/" title="english">english </a><a class="tag" href="/tags/xgn/" title="xgn">xgn </a><a class="tag" href="/tags/cp/" title="cp">cp </a><a class="tag" href="/tags/obcysio/" title="obcysio">obcysio </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2020/03/07/tiny-tiny-rss-ttrss-%E6%90%AD%E5%BB%BA%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97/">Tiny Tiny RSS (ttrss) 搭建&amp;食用指北</a></h3></div><div class="post-content"><p>前言
-最近感觉看睿站有点多，浪费了很多时间。 正巧看见了rsshub的b站up订阅功能 就开始寻找rss服务 但找了半天都没有合适的服务 决定自己建一个
-准备
-服务器一台 一定的动手能力、搜索能力
-过程
-一开始使用Docker镜像的方式进行安装 使用SSH进行安装
-123sudo apt instal...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-03-07</span><i class="fa fa-tag"></i><a class="tag" href="/categories/日♂记/" title="日♂记">日♂记 </a><a class="tag" href="/categories/LOG/" title="LOG">LOG </a><a class="tag" href="/categories/小知识/" title="小知识">小知识 </a><a class="tag" href="/categories/技巧/" title="技巧">技巧 </a><a class="tag" href="/tags/chinese/" title="chinese">chinese </a><a class="tag" href="/tags/xzm/" title="xzm">xzm </a><a class="tag" href="/tags/server/" title="server">server </a></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/page/2/">Próximo</a></li></ul></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
+
+一般来说，任何具有"凸起"形状的函数进行迭代都会有分叉现象出现。
+见Wikipedia
+具体来说，“凸起”指在上:
+
+大概这样吧。非常感性的东西。
+对于我们的函数来说，在变化时其表现具有...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-09</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%91-3-%E7%A5%9E%E5%BF%85%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%87%BD%E6%95%B0/">【神必函数】#3.神必的迭代函数</a></h3></div><div class="post-content"><p>众所周知，有  这么一个东西，叫做单峰映像。
+该函数具有神必的性质：分叉，如图所示：
+
+由于该函数过于著名，有大量有关文章，因此再此不再讨论（赶紧去读Wikipedia啊）
+而本文讨论的是，该函数与单峰映像有许多共通之处，但更加神必
+
+起因
+
+这玩意儿是我研究FM合成时想到的。。。
+真是神必函数...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-09</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E3%80%90indiscipline%E3%80%91%E3%80%901%E3%80%91%E7%90%B4%E7%94%9F%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%B0%8F%E9%A2%98%E4%B8%80%E9%81%93/">【indiscipline】【1】琴生不等式小题一道</a></h3></div><div class="post-content"><p>由于笔者太弱智,这道题想了两天无任何思路.但在上完夏建国课后,突然思如泉涌,在10分钟内完成,金与大家分享一下我的歪门邪道
+题面
+已知且
+证明
+此题最恶心的点便在于是一个阶的乘积虽然在时保证左边不趋但却非常难处理
+因为笔者之前处理乘积一直是取对数,而这题不好取对数,在夏建国讲完最后一道例题的换元时,我便...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-03</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E7%A5%9E%E5%BF%85%E7%9A%84%E4%B8%8D%E7%AD%89%E5%BC%8F/">神必的不等式</a></h3></div><div class="post-content"><p>这是一个神必的远古（12月）发现，我也不知对不对 :/
+
+如图，这是一个严格凹函数.
+</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-03</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E3%80%90%E5%B0%8F%E5%B0%8F%E5%BC%80%E5%8F%91%E3%80%91-python%E7%BC%93%E5%AD%98/">【小小开发】 python缓存</a></h3></div><div class="post-content"><p>最近在写API，因为算力和调用别的API也有限制（大嘘，所以进行一个cache是很有必要的
+本来以为这是一个非常简单的事情，就没有想到要调用轮子，最后发现实现的非常不优雅，，
+惊讶的发现网上竟然有轮子
+使用方式非常简单
+安装包:
+pip3 install werkzeug
+
+初始化:
+from w...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-02</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E3%80%90lss-short%E3%80%91-dream/">【LSS Short】 Dream</a></h3></div><div class="post-content"><p>This is part of the upcoming LSS 5 by XGN.
+
+ONE
+
+
+When we wake up from a dream, are we in reality or another dream?
+
+White hall, I garb in the purest ...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-02</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/%E3%80%90%E7%A5%9E%E5%BF%85%E5%87%BD%E6%95%B0%E3%80%91-2-%E8%80%90%E5%85%8B%E5%87%BD%E6%95%B0/">【神必函数】#2.耐克函数</a></h3></div><div class="post-content"><p>如题。
+
+
+另外， 会渐近于 
+比对勾函数好看得不知到哪里去了
+
+GeoGebra
+</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-01</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/page/2/">Próximo</a></li></ul></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>

@@ -5,7 +5,9 @@
 安装包:
 pip3 install werkzeug
 
-初始化:"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux, OI, Dev, Java"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- hexo injector head_end start -->
+
+初始化:
+from w"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux, OI, Dev, Java"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
@@ -133,20 +135,23 @@ mjx-container[display="true"] + br {
 <p>安装包:</p>
 <pre><code class="language-bash line-numbers">pip3 install werkzeug
 </code></pre>
+
 <p>初始化:</p>
 <pre><code class="language-python line-numbers">from werkzeug.contrib.cache import SimpleCache
 cache = SimpleCache()
 </code></pre>
+
 <p>调用缓存内容:</p>
 <pre><code class="language-python line-numbers">cache.get('item-name')
 </code></pre>
+
 <p>如果缓存中存在，就返回值否则返回None</p>
 <p>写入缓存:</p>
 <pre><code class="language-python line-numbers">cache.set('item-name',item_value, timeout = 1*60*60)
 </code></pre>
+
 <p>注意timeout传入的是秒数</p>
-<p>小小的应用:<br />
-自动返回当前时间的网页，时间缓存5s</p>
+<p>小小的应用:<br>自动返回当前时间的网页，时间缓存5s</p>
 <pre><code class="language-python line-numbers">from flask import Flask
 import time
 from werkzeug.contrib.cache import SimpleCache
@@ -169,10 +174,9 @@ app.run()
 if __name__ == '__main__':
 main()
 </code></pre>
+
 <p>比乱加参数的轮子不知道高到哪里去了！（逃</p>
-<del>
-水blog真好玩
-</del>
+<p><del> 水blog真好玩 </del></p>
 </div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-05-02</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://blog.hellholestudios.top/【小小开发】-python缓存/,Hellholestudios,【小小开发】 python缓存,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/%E7%A5%9E%E5%BF%85%E7%9A%84%E4%B8%8D%E7%AD%89%E5%BC%8F/" title="神必的不等式">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/%E3%80%90lss-short%E3%80%91-dream/" title="【LSS Short】 Dream">下一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
   el:'#vcomments',
   notify:false || false, 

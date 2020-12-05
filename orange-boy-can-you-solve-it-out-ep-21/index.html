@@ -1,8 +1,7 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Hellholestudios, hellholestudios@163.com"><title>Orange Boy Can You Solve It Out? Ep.21 · Hellholestudios</title><meta name="description" content="思考题 for bread
-
 Bread Story
 
-You have a piece of bread which can be seen as a N*M grid. You also have a bottle of jam. You want to put some jam on "><meta name="keywords" content="Hexo,HTML,CSS,android,Linux, OI, Dev, Java"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- hexo injector head_end start -->
+You have a piece of bread which can be seen as a N*M grid. You also have a bottle of jam. You want to put some jam on the b"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux, OI, Dev, Java"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
@@ -124,37 +123,21 @@ mjx-container[display="true"] + br {
   display: none;
 }
 </style></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Hellholestudios</a></h3><div class="description"><p>We work together.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="http://github.com/https://github.com/HellHoleStudios"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai </a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/hhs.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Orange Boy Can You Solve It Out? Ep.21</a></h3></div><div class="post-content"><p>思考题 for bread</p>
-<h1>
-Bread Story
-</h1>
+<h1>Bread Story</h1>
+
 <p>You have a piece of bread which can be seen as a N*M grid. You also have a bottle of jam. You want to put some jam on the bread to make the bread delicious.</p>
 <p>You can do the following two operations:</p>
 <ol>
-<li>
-Put 1 unit of jam on one grid of the bread.
-</p>
-</li>
-<li>
-<p>
-Flatten the jam on one grid of the bread. To do so, it will change the adjacent 4 grids and itself's jam size to 1/5 of the grid you are flattening. For example, if you try to flatten a grid of 1/5 unit of jam, you will get 1/25 unit of jam in grid (x-1,y) (x,y) (x+1,y) (x,y-1) (x,y+1).
-</p>
-</li>
+<li>Put 1 unit of jam on one grid of the bread.</p></li>
+<li><p>Flatten the jam on one grid of the bread. To do so, it will change the adjacent 4 grids and itself's jam size to 1/5 of the grid you are flattening. For example, if you try to flatten a grid of 1/5 unit of jam, you will get 1/25 unit of jam in grid (x-1,y) (x,y) (x+1,y) (x,y-1) (x,y+1).</p></li>
 </ol>
-<p>
-<p>Note: if you try to do flatten on an edge grid, the parts that not in the bread will be wasted. And the flatten is accumulate safe, that is to say, you can add the jam in one grid. See example for details.</p>
-<p>You will consider the bread delicious if all grids have at least <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.921ex" xmlns="http://www.w3.org/2000/svg" width="3.557ex" height="2.877ex" role="img" focusable="false" viewBox="0 -864.9 1572.4 1271.8" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-36-TEX-I-1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path id="MJX-36-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-36-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path id="MJX-36-TEX-I-1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mi"><use xlink:href="#MJX-36-TEX-I-1D44E"></use></g><g data-mml-node="mfrac" transform="translate(529, 0)"><g data-mml-node="mn" transform="translate(344.9, 394) scale(0.707)"><use xlink:href="#MJX-36-TEX-N-31"></use></g><g data-mml-node="msup" transform="translate(220, -391.4) scale(0.707)"><g data-mml-node="mn"><use xlink:href="#MJX-36-TEX-N-35"></use></g><g data-mml-node="mi" transform="translate(500, 289) scale(0.707)"><use xlink:href="#MJX-36-TEX-I-1D44F"></use></g></g><rect width="803.4" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container> unit of jam. Find the minimum number of operation 1 required.</p>
-<h1>
-Example
-</h1>
-<p><strong>Input</strong><br />
-n=3,m=1<br />
-a=2,b=1<br />
-<strong>Output</strong><br />
-2<br />
-<strong>Explain</strong><br />
-You can do as follow:<br />
-put two jam at grid (1,2) so that the bread becomes (0,2,0)<br />
-flatten (1,2) so that the bread becomes (2/5,2/5,2/5)</p>
+
+<p>Note: if you try to do flatten on an edge grid, the parts that not in the bread will be wasted. And the flatten is accumulate safe, that is to say, you can add the jam in one grid. See example for details.
+
+<p>You will consider the bread delicious if all grids have at least <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.921ex" xmlns="http://www.w3.org/2000/svg" width="3.557ex" height="2.877ex" role="img" focusable="false" viewBox="0 -864.9 1572.4 1271.8" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-35-TEX-I-1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path id="MJX-35-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-35-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path id="MJX-35-TEX-I-1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mi"><use xlink:href="#MJX-35-TEX-I-1D44E"></use></g><g data-mml-node="mfrac" transform="translate(529, 0)"><g data-mml-node="mn" transform="translate(344.9, 394) scale(0.707)"><use xlink:href="#MJX-35-TEX-N-31"></use></g><g data-mml-node="msup" transform="translate(220, -391.4) scale(0.707)"><g data-mml-node="mn"><use xlink:href="#MJX-35-TEX-N-35"></use></g><g data-mml-node="mi" transform="translate(500, 289) scale(0.707)"><use xlink:href="#MJX-35-TEX-I-1D44F"></use></g></g><rect width="803.4" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container> unit of jam. Find the minimum number of operation 1 required.</p>
+<h1>Example</h1>
+
+<p><strong>Input</strong><br>n=3,m=1<br>a=2,b=1<br><strong>Output</strong><br>2<br><strong>Explain</strong><br>You can do as follow:<br>put two jam at grid (1,2) so that the bread becomes (0,2,0)<br>flatten (1,2) so that the bread becomes (2/5,2/5,2/5)</p>
 <p>To understand the problem better, you can see the following solution too:</p>
 <pre><code class="line-numbers">first put a unit of jam at grid (1,1) so that the bread becomes (1,0,0)
 then put a unit of jam at grid (1,3) so that the bread becomes (1,0,1)
@@ -164,25 +147,13 @@ then put a unit of jam at grid (1,2) the bread becomes (1/5,7/5,1/5)
 then flatten the jam at grid (1,2) the bread becomes (12/25,7/25,12/25)
 finally put a unit of jam at grid (1,2) the bread becomes (12/25,32/25,12/25)
 </code></pre>
+
 <p>Note that this is not the best solution.</p>
-<p><strong>Input 2</strong><br />
-n=3,m=1<br />
-a=1,b=1<br />
-<strong>Output 2</strong><br />
-1<br />
-put (1,2)<br />
-flatten (1,2)<br />
-<strong>Explain</strong><br />
-This is an example about printing the way to do it</p>
-<h1>
-Constriants
-</h1>
-<p>Subtask1(10%):n=3,m=3<br />
-Subtask2(10%):n,m&lt;=10<br />
-Subtask3(10%):n,m&lt;=1000<br />
-Subtask4(70%):you need to print the way to do it.</p>
-<p><img src="https://i.loli.net/2019/08/24/eGUc2VpQ17xnzXI.png" alt="blob" /></p>
-</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2019-08-24</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://blog.hellholestudios.top/orange-boy-can-you-solve-it-out-ep-21/,Hellholestudios,Orange Boy Can You Solve It Out? Ep.21,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/orange-boy-can-you-solve-it-out-ep-21-5/" title="Orange Boy Can You Solve It Out? Ep.21.5">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/forge-server-season1-ended/" title="Forge Server Season1 Ended">下一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
+<p><strong>Input 2</strong><br>n=3,m=1<br>a=1,b=1<br><strong>Output 2</strong><br>1<br>put (1,2)<br>flatten (1,2)<br><strong>Explain</strong><br>This is an example about printing the way to do it</p>
+<h1>Constriants</h1>
+
+<p>Subtask1(10&#37;):n=3,m=3<br>Subtask2(10&#37;):n,m&lt;=10<br>Subtask3(10&#37;):n,m&lt;=1000<br>Subtask4(70&#37;):you need to print the way to do it.</p>
+<img src="https://i.loli.net/2019/08/24/eGUc2VpQ17xnzXI.png" alt="blob" /></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2019-08-24</span><i class="fa fa-tag"></i><a class="tag" href="/categories/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a><a class="tag" href="/tags/HHS-Old-Blog/" title="HHS Old Blog">HHS Old Blog </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://blog.hellholestudios.top/orange-boy-can-you-solve-it-out-ep-21/,Hellholestudios,Orange Boy Can You Solve It Out? Ep.21,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/orange-boy-can-you-solve-it-out-ep-21-5/" title="Orange Boy Can You Solve It Out? Ep.21.5">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/forge-server-season1-ended/" title="Forge Server Season1 Ended">下一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
   el:'#vcomments',
   notify:false || false, 
   verify:false|| false, 

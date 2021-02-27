@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Hellholestudios, hellholestudios@163.com"><title>【Crimson boy】 【3】 组合几何 · Hellholestudios</title><meta name="description" content="时隔多月,  CB终于归来. 这次的题目虽然不难, 但解答过程可谓是一波三折: A在告诉我题目后, 我自然地尝试用复数解. 可惜由于我太过弱智, 将积的模记成了模相乘再开根, 导致与正确题解失之交臂, 并报告了A复数行不通. A随后告诉我B用复数解决, 我立即反驳, A也认定B的解法是伪证. 可回家"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux, OI, Dev, Java"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Hellholestudios</a></h3><div class="description"><p>We work together.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="http://github.com/https://github.com/HellHoleStudios"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai </a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/hhs.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>【Crimson boy】 【3】 组合几何</a></h3></div><div class="post-content"><p>时隔多月,  CB终于归来. 这次的题目虽然不难, 但解答过程可谓是一波三折: A在告诉我题目后, 我自然地尝试用复数解. 可惜由于我太过弱智, 将积的模记成了模相乘再开根, 导致与正确题解失之交臂, 并报告了A复数行不通. A随后告诉我B用复数解决, 我立即反驳, A也认定B的解法是伪证. 可回家细细琢磨后, 却发现复数乘法法则记错, 原先解答可行, 遂将此趣题列入CB.</p>
+<p>题目: 一笛卡尔平面直角坐标系中有一圆, 圆上有三个横纵坐标均为有理数的点(下称”有理点”), 试证明:</p>
+<ol>
+<li><p>此圆圆心为有理点</p>
+</li>
+<li><p>此圆上有无穷多有理点</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://img.wang/image/kc.45bIH"><img src="https://img.maocdn.cn/img/2021/02/24/kc.jpg" alt="kc.jpg"></a></p>
+<p>思路: 条件即为圆上有三个高斯”有理数”(衍生自高斯整数), 显然两个高斯”有理数”集乘法封闭. </p>
+<p>第一问易得, 第二问要证存在无穷多, 直接证必不好证, 于是就想到构造. </p>
+<p>之后第一想法便是将圆平移到原点, 这样便能方便地使用复数乘法, 再在现有的有理点上乘一个高斯’’有理数’’$e^{i\theta}$使其转过一定角度. </p>
+<p>那么只要找到无数有理的$(cos\theta,sin\theta)$即可.</p>
+<p>题解:</p>
+<ol>
+<li>设两有理点为$(x_1,y_1)$, $(x_2,y_2)$. </li>
+</ol>
+<p>它们的连线斜率为$\frac{y_1-y_2}{x_1-x_2}$, 中点为$(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2})$; </p>
+<p>于是中垂线方程为$y=-\frac{x_1-x_2}{y_1-y_2}(x-\frac{x_1+x_2}{2})+\frac{y_1+y_2}{2}$ , 其系数均为有理数(不考虑精神病地同乘无理数). </p>
+<p>同理可得另一条中垂线系数也必为有理数. </p>
+<p>将两条中垂线联立方程, 其解也必为有理数对, 即圆心为有理点.</p>
+<ol start="2">
+<li>由于圆心为有理数, 不妨将此圆圆心平移至$(0,0)$, 这一步操作并不影响一个点的”有理性”.</li>
+</ol>
+<p>任取一给定的有理点平移后对应的点$(x_0,y_0)$, 将其看做$x_0+y_0i$, 其中$x_0,y_0\in \mathbb{Q}$.</p>
+<p>取$\theta \in (0,\frac{\pi}{2}),s.t.cos\theta,sin\theta\in\mathbb{Q}$</p>
+<p>题目中所要求的有理点取$(x_0+y_0i)(cos\theta+isin\theta)$对应的点即可.</p>
+<p>因为此类复数的模为$\sqrt{x_0^2+y_0^2}\cdot1=\sqrt{x_0^2+y_0^2}$, 所以此类点依然在圆上.</p>
+<p>因为其中乘数的实部与虚部均为有理数, 所以积的实部与虚部也为有理数, 即此类点为有理点. 满足条件.</p>
+<p>下证$\theta$有无数个:</p>
+<p>要证有无穷多对$cos\theta,sin\theta$为有理数, 即证有无穷多对$p,q\in\mathbb{Q} s.t.p^2+q^2=1$</p>
+<p>联想到勾股方程, 取$p=\frac{i^2-j^2}{i^2+j^2},q=\frac{2ij}{i^2+j^2}$,其中$i,j\in\mathbb{Z}^+,(i,j)=1,i&gt;j,2\nmid i^2+j^2$即可.</p>
+<p>$(i^2+j^2,i^2-j^2)=(i^2+j^2,2i^2)=(i^2+j^2,i^2)=(j^2,i^2)=1$, $p$为分子奇数的既约分数.</p>
+<p>$((i^2+j^2)^2,(2ij)^2)=((i^2+j^2)^2,(i^2-j^2)^2)=1\Rightarrow(i^2+j^2,2ij)=1$, $q$为分子是偶数的既约分数</p>
+<p>所以对不同的$i^2+j^2$, ${p,q}$一定不同, 即有无穷多$\theta \quad \square$</p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-02-27</span><i class="fa fa-tag"></i><a class="tag" href="/categories/CB/" title="CB">CB </a><a class="tag" href="/tags/Chinese/" title="Chinese">Chinese </a><a class="tag" href="/tags/CB/" title="CB">CB </a><a class="tag" href="/tags/HDD/" title="HDD">HDD </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://blog.hellholestudios.top/【crimson-boy】-【3】-组合几何/,Hellholestudios,【Crimson boy】 【3】 组合几何,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/%E6%97%A0%E6%83%B3%E5%B1%B1%E6%B8%B8%E8%AE%B0-by-zky/" title="无想山游记 by zky">下一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
+  el:'#vcomments',
+  notify:false || false, 
+  verify:false|| false, 
+  app_id:'2BGnckOaVW9KOEYLdvi0VL6v-gzGzoHsz',
+  app_key:'rl2gEqTTiDQfKKjAJO85SQYf',
+  placeholder:'Just go go',
+  path: window.location.pathname,
+  avatar:''
+})</script></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
